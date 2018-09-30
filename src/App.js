@@ -119,17 +119,25 @@ class App extends Component {
     } // setState parameter callback function
     );
 
+  // removeGuestAt = index =>
+  //   this.setState(
+  //     (prevState) => {
+  //       guests: [
+  //         ...prevState.guests.slice(0, index),
+  //         ...prevState.guests.slice(index + 1)
+  //       ]
+  //     }
+  //   );
+
   removeGuestAt = index =>
-    this.setState(
-      (prevState)=>{
-        guests: [
-          ...prevState.guests.slice(0, index),
-          ...prevState.guests.slice(index+1)
-        ]
-      }
-    );
-  
-    getTotalInvited = () => this.state.guests.length;
+  this.setState({
+    guests: [
+      ...this.state.guests.slice(0, index),
+      ...this.state.guests.slice(index + 1, this.getTotalInvited())
+    ]
+  });
+
+  getTotalInvited = () => this.state.guests.length;
   getTotalConfirmed = () => this.state.guests.filter((guest) => guest.isConfirmed).length;
 
   render() {
@@ -147,7 +155,7 @@ class App extends Component {
               onChange={this.handleNameInput}
               value={this.state.pendingGuest}
               type="text" defaultValue="" placeholder="Invite Someone" />
-            <button 
+            <button
               onClick={this.newGuestSubmitHandler}
               type="submit" name="submit" value="submit">Submit</button>
           </form>
@@ -163,17 +171,17 @@ class App extends Component {
               /> Hide those who haven't responded
           </label>
           </div>
-          <Counter 
+          <Counter
             totalInvited={totalInvited}
             numberAttending={numberAttending}
             numberUnconfirmed={numberUnconfirmed}
-             />
+          />
           <GuestList guests={this.state.guests}
             toggleConfirmationAt={this.toggleConfirmationAt}
             toggleEditingAt={this.toggleEditingAt}
             setNameAt={this.setNameAt}
-            isFiltered={this.state.isFiltered} 
-            removeGuestAt={this.removeGuestAt} 
+            isFiltered={this.state.isFiltered}
+            removeGuestAt={this.removeGuestAt}
             pendingGuest={this.state.pendingGuest}
           />
         </div>
