@@ -10,14 +10,15 @@
 body {
   font-family: 'Lato', sans-serif;
   color: #4c4c4c;
-  background: #f8fdf3;
+  
+  background:rgb(252, 255, 206);  
 }
 
 .App {
   width: 100%;
   max-width: 900px;
   margin: 2.5em auto;  
-  background: #fcfcfc;
+  background:rgba(133, 133, 133, 0.1);
   overflow: hidden;
   -webkit-box-shadow: 0 0 26px rgba(0, 0, 0, .13);
   box-shadow: 0 0 26px rgba(0, 0, 0, .13);
@@ -30,7 +31,7 @@ form button {
 }
 
 h1 {
-  font-family: 'Courgette', cursive;
+  font-family: 'Lato', sans-serif;
   text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
   line-height: .65;
   margin-top: .5em;
@@ -47,22 +48,33 @@ p {
   text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
 }
 
-form {
+header form {
   width: 60%;
-  background: white;
+  background: rgba(255, 255, 255, 0.488);
   display: inline-block;
   overflow: hidden;
   display: -ms-flexbox;
   display: flex;  
-  border: solid 4px white;
+  border: solid 4px rgba(255, 255, 255, 0.488);;
   -webkit-box-shadow: 0 1px 14px rgba(0, 0, 0, .12);
   box-shadow: 0 1px 14px rgba(0, 0, 0, .12);
 }
 
-form button {
-  padding: 0 1em;
-  font-size: 1em;
-  background: #7bcbc4;  
+header form input{
+  background: rgba(255, 255, 255, 0.488);  
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: rgba(32, 15, 69, 0.888);
+}
+
+header form button {
+  padding: 0 1.1rem;
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: rgba(32, 15, 69, 0.444);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  /*background-image: linear-gradient(90deg,  rgba(153, 247, 111, 0.333), rgba(108, 255, 241, 0.444), rgba(255, 72, 104, 0.333)); */
 }
 
 ul {
@@ -73,11 +85,12 @@ ul {
 
 ul li {
   padding: 1em;
-  background: #fff;
-  border-radius: .8em;
-  border: solid 1px rgba(88, 183, 205, .15);
-  border-bottom: solid 2px rgba(88, 183, 205, .15);
+  background:rgba(255, 255, 255, 0.222);  
+  border: solid 1px rgba(32, 15, 69, 0.333);
+  border-bottom: solid 2px rgba(32, 15, 69, 0.333);
   position: relative;
+  color: rgba(32, 15, 69, 0.888);
+  font-weight: 400;
 }
 
 button {
@@ -92,10 +105,15 @@ button {
 
 header {
   text-align: center;
-  background: /* linear-gradient(90deg, #d4eece, #55b3d0, #1e7eb7), */
+  background: linear-gradient(90deg, #3e1d85, #0521c075, #442092), 
     url(images/header-bg.jpg) no-repeat;
-  background-blend-mode: multiply;
+  background-blend-mode: lighten; 
   background-size: cover;
+}
+
+button, header p{
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 header input {
@@ -106,7 +124,7 @@ header input {
 
 li span,
 li input[type=text] {
-  color: #707070;
+  /*color: white;*/
   font-size: 1.3em;
   margin-bottom: .3em;
 }
@@ -115,6 +133,7 @@ li input[type=text] {
   padding: .2em;
   width: 95%;
   border: 1px dotted rgba(0, 0, 0, .2);
+  background:rgba(222, 222, 222, 0.233);
 }
 
 input[type="checkbox"] {
@@ -124,7 +143,7 @@ input[type="checkbox"] {
 li label {
   font-size: .9em;
   display: block;
-  color: rgba(112, 112, 112, .55);
+  color: rgba(32, 15, 69, 0.444);
 }
 
 li span,
@@ -136,13 +155,15 @@ li button {
   font-size: .78em;
   margin-top: 1.65em;
   margin-right: .4em;  
-  padding: .4em .6em;
+  padding: .5em .7em;
   color: white;
-  background: #58b7cd;
+  background: rgba(32, 15, 69, 0.555);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
 li button:last-child {
-  background: rgba(88, 183, 205, .5);
+  background: rgba(32, 15, 69, 0.222);;
 }
 
 div > input:last-child {
@@ -240,8 +261,8 @@ td:last-child {
 
 @media (min-width: 769px) {
   header {
-    height: 280px;
-    padding: 2.5em 1em 1em;
+    height: 24rem;
+    padding: 2em 1em 1em;
     background-position: 0 -95px;
   }
   div > label {
@@ -254,7 +275,7 @@ td:last-child {
     font-size: 1.95em;
   }
   form {
-    margin: 4.15em auto 0;
+    margin: 10rem auto 0;
     z-index: 3000;
     position: relative;
   }

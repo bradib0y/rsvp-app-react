@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 const Header = (props) =>
     <header>
-        <h1>code pilots</h1>
+        <div class="typewriter">
+            <h1>code pilots</h1>
+        </div>
         <p>conference of grandmasters</p>
         <form>
             <input
