@@ -74,11 +74,13 @@ class App extends Component {
             {
               name: prevState.pendingGuest,
               isConfirmed: false,
-              isEditing: false
+              isEditing: false,
+              id: prevState.lastId + 1
             },
             ...prevState.guests
           ],
-          pendingGuest: ""
+          pendingGuest: "",
+          lastId: prevState.lastId + 1
         };
       }
     );
