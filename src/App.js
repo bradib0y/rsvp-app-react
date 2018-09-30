@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import GuestList from './GuestList';
-import Counter from './Counter';
-
 import './App.css';
+
+import Header from './Header';
+import MainContent from './MainContent';
+
 
 class App extends Component {
 
@@ -38,7 +39,7 @@ class App extends Component {
       {
         name: "Alena",
         isConfirmed: false,
-        isEditing: true
+        isEditing: false
       }
     ],
   };
@@ -130,12 +131,12 @@ class App extends Component {
   //   );
 
   removeGuestAt = index =>
-  this.setState({
-    guests: [
-      ...this.state.guests.slice(0, index),
-      ...this.state.guests.slice(index + 1, this.getTotalInvited())
-    ]
-  });
+    this.setState({
+      guests: [
+        ...this.state.guests.slice(0, index),
+        ...this.state.guests.slice(index + 1)
+      ]
+    });
 
   getTotalInvited = () => this.state.guests.length;
   getTotalConfirmed = () => this.state.guests.filter((guest) => guest.isConfirmed).length;
@@ -147,44 +148,25 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header>
-          <h1>RSVP</h1>
-          <p>A Treehouse App</p>
-          <form>
-            <input
-              onChange={this.handleNameInput}
-              value={this.state.pendingGuest}
-              type="text" defaultValue="" placeholder="Invite Someone" />
-            <button
-              onClick={this.newGuestSubmitHandler}
-              type="submit" name="submit" value="submit">Submit</button>
-          </form>
-        </header>
-        <div className="main">
-          <div>
-            <h2>Invitees</h2>
-            <label>
-              <input
-                type="checkbox"
-                onChange={this.toggleFilter}
-                checked={this.state.isFiltered}
-              /> Hide those who haven't responded
-          </label>
-          </div>
-          <Counter
-            totalInvited={totalInvited}
-            numberAttending={numberAttending}
-            numberUnconfirmed={numberUnconfirmed}
-          />
-          <GuestList guests={this.state.guests}
-            toggleConfirmationAt={this.toggleConfirmationAt}
-            toggleEditingAt={this.toggleEditingAt}
-            setNameAt={this.setNameAt}
-            isFiltered={this.state.isFiltered}
-            removeGuestAt={this.removeGuestAt}
-            pendingGuest={this.state.pendingGuest}
-          />
-        </div>
+        <Header
+          handleNameInput={this.handleNameInput}
+          pendingGuest={this.state.pendingGuest}
+          newGuestSubmitHandler={this.newGuestSubmitHandler}
+        />
+        <MainContent
+          toggleFilter={this.toggleFilter}
+          isFiltered={this.state.isFiltered}
+          totalInvited={totalInvited}
+          numberAttending={numberAttending}
+          numberUnconfirmed={numberUnconfirmed}
+          guests={this.state.guests}
+          toggleConfirmationAt={this.toggleConfirmationAt}
+          toggleEditingAt={this.toggleEditingAt}
+          setNameAt={this.setNameAt}
+          isFiltered={this.state.isFiltered}
+          removeGuestAt={this.removeGuestAt}
+          pendingGuest={this.state.pendingGuest}
+        />
       </div>
     );
   }
