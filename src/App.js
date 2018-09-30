@@ -86,12 +86,12 @@ class App extends Component {
     );
   };
 
-  toggleGuestPropertyAt = (propertyToChange, indexToChange) =>
+  toggleGuestPropertyAt = (propertyToChange, idToChange) =>
     this.setState((prevState) => {
       return {
         guests: prevState.guests.map((guest, index) => {
 
-          if (index === indexToChange) {
+          if (guest.id === idToChange) {
             return {
               ...guest,
               [propertyToChange]: !guest[propertyToChange]
@@ -106,7 +106,7 @@ class App extends Component {
     } // setState parameter callback function
     );
 
-  toggleConfirmationAt = index => this.toggleGuestPropertyAt("isConfirmed", index);
+  toggleConfirmation = id => this.toggleGuestPropertyAt("isConfirmed", id);
   toggleEditingAt = index => this.toggleGuestPropertyAt("isEditing", index);
 
   setNameAt = (text, indexToChange) =>
@@ -159,7 +159,7 @@ class App extends Component {
           numberAttending={numberAttending}
           numberUnconfirmed={numberUnconfirmed}
           guests={this.state.guests}
-          toggleConfirmationAt={this.toggleConfirmationAt}
+          toggleConfirmation={this.toggleConfirmation}
           toggleEditingAt={this.toggleEditingAt}
           setNameAt={this.setNameAt}
           isFiltered={this.state.isFiltered}
