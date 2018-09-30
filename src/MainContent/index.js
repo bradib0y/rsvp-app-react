@@ -22,7 +22,7 @@ const MainContent = (props) =>
         />
         <GuestList guests={props.guests}
             toggleConfirmation={props.toggleConfirmation}
-            toggleEditingAt={props.toggleEditingAt}
+            toggleEditingForId={props.toggleEditingForId}
             setNameAt={props.setNameAt}
             isFiltered={props.isFiltered}
             removeGuestAt={props.removeGuestAt}
@@ -39,7 +39,7 @@ MainContent.PropTypes = {
     numberUnconfirmed: PropTypes.number.isRequired,
     guests: PropTypes.array.isRequired,
     toggleConfirmation: PropTypes.func.isRequired,
-    toggleEditingAt: PropTypes.func.isRequired,
+    toggleEditingForId: PropTypes.func.isRequired,
     setNameAt: PropTypes.func.isRequired,
     isFiltered: PropTypes.bool.isRequired,
     removeGuestAt: PropTypes.func.isRequired,

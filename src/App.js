@@ -107,7 +107,7 @@ class App extends Component {
     );
 
   toggleConfirmation = id => this.toggleGuestPropertyAt("isConfirmed", id);
-  toggleEditingAt = index => this.toggleGuestPropertyAt("isEditing", index);
+  toggleEditingForId = id => this.toggleGuestPropertyAt("isEditing", id);
 
   setNameAt = (text, indexToChange) =>
     this.setState((prevState) => {
@@ -160,7 +160,7 @@ class App extends Component {
           numberUnconfirmed={numberUnconfirmed}
           guests={this.state.guests}
           toggleConfirmation={this.toggleConfirmation}
-          toggleEditingAt={this.toggleEditingAt}
+          toggleEditingForId={this.toggleEditingForId}
           setNameAt={this.setNameAt}
           isFiltered={this.state.isFiltered}
           removeGuestAt={this.removeGuestAt}
