@@ -18,8 +18,8 @@ const Header = (props) =>
     ;
 
 Header.PropTypes = {
-    handleNameInput: PropTypes.func.isRequired, 
-    newGuestSubmitHandler: PropTypes.func.isRequired, 
+    handleNameInput: PropTypes.func.isRequired,
+    newGuestSubmitHandler: PropTypes.func.isRequired,
     pendingGuest: PropTypes.string.isRequired
 };
 

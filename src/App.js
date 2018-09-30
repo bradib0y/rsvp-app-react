@@ -120,16 +120,6 @@ class App extends Component {
     } // setState parameter callback function
     );
 
-  // removeGuestAt = index =>
-  //   this.setState(
-  //     (prevState) => {
-  //       guests: [
-  //         ...prevState.guests.slice(0, index),
-  //         ...prevState.guests.slice(index + 1)
-  //       ]
-  //     }
-  //   );
-
   removeGuestAt = index =>
     this.setState({
       guests: [
