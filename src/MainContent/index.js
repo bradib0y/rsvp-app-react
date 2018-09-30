@@ -25,7 +25,7 @@ const MainContent = (props) =>
             toggleEditingForId={props.toggleEditingForId}
             setNameForId={props.setNameForId}
             isFiltered={props.isFiltered}
-            removeGuestAt={props.removeGuestAt}
+            removeGuestById={props.removeGuestById}
             pendingGuest={props.pendingGuest}
         />
     </div>
@@ -42,7 +42,7 @@ MainContent.PropTypes = {
     toggleEditingForId: PropTypes.func.isRequired,
     setNameForId: PropTypes.func.isRequired,
     isFiltered: PropTypes.bool.isRequired,
-    removeGuestAt: PropTypes.func.isRequired,
+    removeGuestById: PropTypes.func.isRequired,
     pendingGuest: PropTypes.string.isRequired
 };
 

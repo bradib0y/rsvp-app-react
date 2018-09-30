@@ -125,17 +125,18 @@ class App extends Component {
 
         } // map function callback function
         ) // map function call
-      } // object returned by setState parameter callback function
+      }; // object returned by setState parameter callback function
     } // setState parameter callback function
     );
 
-  removeGuestAt = index =>
-    this.setState({
-      guests: [
-        ...this.state.guests.slice(0, index),
-        ...this.state.guests.slice(index + 1)
-      ]
-    });
+  removeGuestById = idToRemove =>
+    this.setState(
+      (prevState) => {
+        return {
+          guests: prevState.guests.filter((guest) => guest.id != idToRemove)
+        };
+      }
+    );
 
   getTotalInvited = () => this.state.guests.length;
   getTotalConfirmed = () => this.state.guests.filter((guest) => guest.isConfirmed).length;
@@ -163,7 +164,7 @@ class App extends Component {
           toggleEditingForId={this.toggleEditingForId}
           setNameForId={this.setNameForId}
           isFiltered={this.state.isFiltered}
-          removeGuestAt={this.removeGuestAt}
+          removeGuestById={this.removeGuestById}
           pendingGuest={this.state.pendingGuest}
         />
       </div>
