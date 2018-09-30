@@ -8,38 +8,45 @@ import MainContent from './MainContent';
 class App extends Component {
 
   state = {
+    lastId: 6,
     isFiltered: false,
     pendingGuest: "",
     guests: [
       {
         name: "Treasure",
         isConfirmed: false,
-        isEditing: false
+        isEditing: false,
+        id: 1
       },
       {
         name: "Nic",
         isConfirmed: false,
-        isEditing: false
+        isEditing: false,
+        id: 2
       },
       {
         name: "Guil",
         isConfirmed: true,
-        isEditing: false
+        isEditing: false,
+        id: 3
       },
       {
         name: "Andrew",
         isConfirmed: true,
-        isEditing: false
+        isEditing: false,
+        id: 4
       },
       {
         name: "Dave",
         isConfirmed: false,
-        isEditing: false
+        isEditing: false,
+        id: 5
       },
       {
         name: "Alena",
         isConfirmed: false,
-        isEditing: false
+        isEditing: false,
+        id: 6
       }
     ],
   };
