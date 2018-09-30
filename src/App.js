@@ -109,12 +109,12 @@ class App extends Component {
   toggleConfirmation = id => this.toggleGuestPropertyAt("isConfirmed", id);
   toggleEditingForId = id => this.toggleGuestPropertyAt("isEditing", id);
 
-  setNameAt = (text, indexToChange) =>
+  setNameForId = (text, idToChange) =>
     this.setState((prevState) => {
       return {
         guests: prevState.guests.map((guest, index) => {
 
-          if (index === indexToChange) {
+          if (guest.id === idToChange) {
             return {
               ...guest,
               name: text
@@ -161,7 +161,7 @@ class App extends Component {
           guests={this.state.guests}
           toggleConfirmation={this.toggleConfirmation}
           toggleEditingForId={this.toggleEditingForId}
-          setNameAt={this.setNameAt}
+          setNameForId={this.setNameForId}
           isFiltered={this.state.isFiltered}
           removeGuestAt={this.removeGuestAt}
           pendingGuest={this.state.pendingGuest}
