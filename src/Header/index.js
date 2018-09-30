@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const Header = (props) =>
     <header>
-        <h1>RSVP</h1>
-        <p>A Treehouse App</p>
+        <h1>code pilots</h1>
+        <p>conference of grandmasters</p>
         <form>
             <input
                 onChange={props.handleNameInput}
