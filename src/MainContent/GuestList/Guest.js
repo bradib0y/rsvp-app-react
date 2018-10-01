@@ -10,6 +10,7 @@ const Guest = props =>
         >
             {props.name}
         </GuestName>
+
         <label>
             <input
                 type="checkbox"
@@ -17,7 +18,13 @@ const Guest = props =>
                 onChange={props.handleConfirmation}
 
             /> Confirmed
-    </label>
+        </label>
+
+        <label className="customCheckboxContainer">Confirmed
+            <input type="checkbox" checked={props.isConfirmed} onChange={props.handleConfirmation} />
+            <span className="checkmark"></span>
+        </label>
+
         <button onClick={props.handleToggleEditing}>{props.isEditing ? "save" : "edit"}</button>
         <button onClick={props.handleRemove}>remove</button>
     </li>;
