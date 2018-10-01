@@ -121,6 +121,12 @@ button, header p{
   font-weight: 300;
 }
 
+header p{
+  margin-top: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
 header input {
   padding: 12px;
   font-size: 1.15em;
@@ -129,13 +135,14 @@ header input {
 
 li span,
 li input[type=text] {  
+  padding: .2em;
   font-size: 1.48em;
   margin-bottom: .5em;
   color: #4c4c4c;
 }
 
 li input[type=text] {
-  padding: .2em;
+  
   width: 95%;
   border: 1px dotted rgba(0, 0, 0, .2);
   background:rgba(222, 222, 222, 0.233);
@@ -263,7 +270,7 @@ td:last-child {
 @media (min-width: 769px) {
   header {
     height: 24rem;
-    padding: 2em 1em 1em;
+    padding: 1rem 1rem 1rem;
     background-position: 0 -95px;
   }
   div > label {
@@ -314,6 +321,7 @@ td:last-child {
   }
   .attendingRow{
     color:#622ED1;
+    font-weight: bold;
   }
   .totalRow{    
     border-top: 1px solid rgb( 76,76,76);
