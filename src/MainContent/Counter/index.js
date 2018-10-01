@@ -3,22 +3,22 @@ import PropTypes from 'prop-types';
 
 const Counter = (props) => {
   return (
-    <table className="counter">
-      <tbody>
-        <tr>
-          <td>Attending:</td>
-          <td>{props.numberAttending}</td>
-        </tr>
-        <tr>
-          <td>Unconfirmed:</td>
-          <td>{props.numberUnconfirmed}</td>
-        </tr>
-        <tr>
-          <td>Total:</td>
-          <td>{props.totalInvited}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="counter">
+
+      <div className="counterRow attendingRow">
+        <div className="counterLegend">Attending:</div>
+        <div className="counterData">{props.numberAttending}</div>
+      </div>
+      <div className="counterRow">
+        <div className="counterLegend">Unconfirmed:</div>
+        <div className="counterData">{props.numberUnconfirmed}</div>
+      </div>
+      <div className="counterRow totalRow">
+        <div className="counterLegend">Total:</div>
+        <div className="counterData">{props.totalInvited}</div>
+      </div>
+
+    </div>
   );
 };
 

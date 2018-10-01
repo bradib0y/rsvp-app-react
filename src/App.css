@@ -46,12 +46,13 @@
 
   /* The container */
 .customCheckboxContainer {
-    display: block;
+    display: block;    
     position: relative;
-    padding-left: 35px;
+    padding-left: 2.2rem;
     margin-bottom: 12px;
+    width: max-content;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 1.48rem;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -70,8 +71,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    margin: .11rem;
+    height: 1.48rem;
+    width: 1.48rem;
     background-color: #3E1D8593;
 }
 

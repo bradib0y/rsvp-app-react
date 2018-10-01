@@ -60,7 +60,7 @@ header form {
   overflow: hidden;
   display: -ms-flexbox;
   display: flex;  
-  border: solid 3px rgba(255, 255, 255, 0.488);;
+  border: solid 3px rgba(255, 255, 255, 0.488);
   -webkit-box-shadow: 0 1px 14px rgba(0, 0, 0, .12);
   box-shadow: 0 1px 14px rgba(0, 0, 0, .12);
 }
@@ -180,10 +180,6 @@ div > label {
   color: #767676;
 }
 
-.counter {
-  display: block;
-}
-
 tr {
   color: rgba(118, 118, 118, .75);
 }
@@ -277,7 +273,7 @@ td:last-child {
     font-size: 5.8em;
   }
   h2 {
-    font-size: 1.95em;
+    font-size: 2.4rem;
   }
   form {
     margin: 10rem auto 0;
@@ -288,23 +284,45 @@ td:last-child {
     width: 90%;
   }
   .main {
-    padding: 3.8em 1.5em .75em;
+    padding: 2.5rem 1.5em .75em;
     position: relative;
     z-index: 10;
   }
+  .dashboard{
+    display: flex;
+    justify-content: space-between;    
+    margin: 1rem;
+  }
   .counter {
-    float: right;
+    font-size: 1.11rem;
+    line-height: 1.88rem;
     text-align: right;
-    margin-right: 1.25%;
+    
+  }
+  .counterRow{
+    display: flex;
+    flex-wrap: nowrap;    
+    color: rgb( 76,76,76);
+  }
+  .counterLegend{
+    margin-left: auto;
+    padding-left: .5rem;
+  }
+  .counterData{
+    min-width: 1.88rem;
+    text-align: center;
+  }
+  .attendingRow{
+    color:#622ED1;
+  }
+  .totalRow{    
+    border-top: 1px solid rgb( 76,76,76);
+    font-weight: bold;
   }
   td:last-child {
     padding-left: 5px;
   }
-  .main > div {
-    float: left;
-    margin-left: 1.25%;
-    margin-bottom: 1.5em;
-  }
+  
   ul {
     display: -ms-flexbox;
     display: flex;
