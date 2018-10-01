@@ -55,28 +55,32 @@ p {
 
 header form {
   width: 52%;
-  background: rgba(255, 255, 255, 0.333);
+  background: rgba(255, 255, 255, 0.25);
   display: inline-block;
   overflow: hidden;
   display: -ms-flexbox;
   display: flex;  
-  border: solid 3px rgba(255, 255, 255, 0.488);
+  border: solid 3px rgba(255, 255, 255, 0.333);
   -webkit-box-shadow: 0 1px 14px rgba(0, 0, 0, .12);
   box-shadow: 0 1px 14px rgba(0, 0, 0, .12);
 }
 
 header form input{
-  background: rgba(255, 255, 255, 0.488);  
+  background: rgba(255, 255, 255, 0.333);  
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: rgba(32, 15, 69, 0.888);
+}
+
+header form input::placeholder{
+  color: #F9FCCC6d;
 }
 
 header form button {
   padding: 0 1.1rem;
   font-size: 1rem;
   font-weight: 300;
-  background-color: rgba(32, 15, 69, 0.444);
+  background-color: rgba(32, 15, 69, 0.333);
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   /*background-image: linear-gradient(90deg,  rgba(153, 247, 111, 0.333), rgba(108, 255, 241, 0.444), rgba(255, 72, 104, 0.333)); */
@@ -139,10 +143,11 @@ li input[type=text] {
   font-size: 1.48em;
   margin-bottom: .5em;
   color: #4c4c4c;
+  border: 1px dotted rgba(0, 0, 0, 0);
 }
 
 li input[type=text] {
-  
+  font-family: 'Lato', sans-serif;
   width: 95%;
   border: 1px dotted rgba(0, 0, 0, .2);
   background:rgba(222, 222, 222, 0.233);
