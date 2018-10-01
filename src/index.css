@@ -14,6 +14,10 @@ body {
   background:rgb(252, 255, 206);  
 }
 
+::selection{
+  background: rgba(98, 46, 209, 0.777);
+  color:white;
+}
 
 .App {
   width: 100%;
