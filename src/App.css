@@ -49,7 +49,7 @@
     display: block;    
     position: relative;
     padding-left: 2.2rem;
-    margin-bottom: 12px;
+    
     width: max-content;
     cursor: pointer;
     font-size: 1.48rem;
@@ -112,4 +112,22 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+li .customCheckboxContainer{
+    padding-left: 1.5rem;
+    font-size: .91rem;
+}
+
+li .customCheckboxContainer .checkmark{
+    height: .91rem;
+    width: .91rem;
+}
+
+li .customCheckboxContainer .checkmark:after{
+    left: 4px;
+    top: 2px;
+    height: 7px;
+    width: 3px;
+    border-width: 0 2px 2px 0;
 }

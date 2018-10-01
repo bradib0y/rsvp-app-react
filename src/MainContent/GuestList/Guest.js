@@ -11,15 +11,6 @@ const Guest = props =>
             {props.name}
         </GuestName>
 
-        <label>
-            <input
-                type="checkbox"
-                checked={props.isConfirmed}
-                onChange={props.handleConfirmation}
-
-            /> Confirmed
-        </label>
-
         <label className="customCheckboxContainer">Confirmed
             <input type="checkbox" checked={props.isConfirmed} onChange={props.handleConfirmation} />
             <span className="checkmark"></span>
